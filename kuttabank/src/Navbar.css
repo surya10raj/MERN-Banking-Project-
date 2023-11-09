@@ -1,0 +1,82 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+.left-side a {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 50px;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+}
+
+.auth-links a,
+.auth-links button {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.about-link:hover,
+.customer-care-link:hover,
+.auth-links a:hover,
+.auth-links button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column; /* Stack items vertically */
+      padding: 20px;
+  }
+
+  .left-side,
+  .auth-links {
+      flex-direction: column; /* Stack links vertically */
+      margin-bottom: 10px; /* Some margin for spacing */
+  }
+
+  .left-side a,
+  .auth-links a,
+  .auth-links button {
+      margin-right: 0; /* Remove horizontal margin */
+      margin-bottom: 10px; /* Add vertical margin */
+  }
+
+  .navbar-logo {
+      margin-bottom: 15px; /* Some space below the logo */
+  }
+
+  /* Optional: Hamburger menu styles (to be added if using a JS toggle) */
+  .hamburger-menu {
+      display: none; /* Initially hidden */
+  }
+
+  .hamburger-menu.active .left-side,
+  .hamburger-menu.active .auth-links {
+      display: flex; /* Display menu items when active */
+  }
+}
